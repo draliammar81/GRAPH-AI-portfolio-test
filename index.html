@@ -127,23 +127,17 @@
 
     .avatar-mini{width:36px; height:36px; border-radius:50%; object-fit:cover; border:2px solid rgba(127,127,127,.28); box-shadow:0 2px 10px rgba(0,0,0,.25)}
 
+    /* Prominent hero portrait */
+    .hero-portrait{display:flex; align-items:center; justify-content:center;}
+    .portrait-wrap{position:relative; padding:10px; border-radius:50%; background:conic-gradient(from 220deg, var(--brand1), var(--brand2)); box-shadow:0 24px 60px rgba(0,0,0,.45), 0 0 0 8px rgba(124,92,255,.15)}
+    .portrait-wrap img{display:block; width:340px; height:340px; border-radius:50%; object-fit:cover; border:1px solid rgba(127,127,127,.25);}
+    .portrait-wrap::after{content:""; position:absolute; inset:-12px; border-radius:50%; filter:blur(18px); background:radial-gradient(closest-side, rgba(124,92,255,.35), transparent 70%); z-index:-1}
+    @media (max-width:980px){ .portrait-wrap img{width:220px; height:220px} }
+
     /* Reveal on scroll */
     .reveal{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease}
     .reveal.show{opacity:1; transform:none}
-      /* Chatbot */
-    .chat-launcher{position:fixed; right:20px; bottom:20px; width:56px; height:56px; border-radius:50%; border:1px solid rgba(127,127,127,.28); background:linear-gradient(135deg, var(--brand1), var(--brand2)); color:#0b0f1a; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; box-shadow:0 14px 32px rgba(0,0,0,.35); z-index:55}
-    .chat-launcher span{font-size:20px}
-    .chatbot{position:fixed; right:20px; bottom:90px; width:340px; max-height:70vh; display:none; flex-direction:column; border-radius:16px; overflow:hidden; background:var(--bg); border:1px solid rgba(127,127,127,.28); box-shadow:0 18px 38px rgba(0,0,0,.45); z-index:56}
-    .chatbot.open{display:flex}
-    .chatbot-header{display:flex; align-items:center; justify-content:space-between; padding:10px 12px; background:linear-gradient(135deg, color-mix(in oklab, var(--brand1) 18%, transparent), color-mix(in oklab, var(--brand2) 14%, transparent)); border-bottom:1px solid rgba(127,127,127,.22)}
-    .chatbot-header .title{font-weight:800}
-    .chatbot-body{padding:12px; overflow:auto; display:flex; flex-direction:column; gap:10px}
-    .msg{max-width:78%; padding:10px 12px; border-radius:14px; border:1px solid rgba(127,127,127,.22)}
-    .bot{align-self:flex-start; background:rgba(255,255,255,.04)}
-    .user{align-self:flex-end; background:linear-gradient(135deg, var(--brand1), var(--brand2)); color:#0b0f1a; border-color:transparent}
-    .chatbot-input{display:flex; gap:8px; padding:12px; border-top:1px solid rgba(127,127,127,.22); background:color-mix(in oklab, var(--bg) 96%, transparent)}
-    .chatbot-input input{flex:1; padding:10px 12px; border-radius:12px; border:1px solid rgba(127,127,127,.28); background:transparent; color:var(--fg)}
-    .chatbot-input button{padding:10px 12px; border-radius:12px; border:1px solid rgba(127,127,127,.28); background:var(--glass); color:var(--fg); cursor:pointer}
+      
 
   </style>
 </head>
@@ -157,7 +151,7 @@
   </aside>
   <header>
     <div class="container nav">
-      <div class="logo"><span class="mark"></span><img class="avatar-mini" src="https://raw.githubusercontent.com/draliammar81/Personal-Portfolio/main/photo%20Ali%2025.jpg" alt="Ali Ammar" /> <span>Generative AI for Work & Research</span></div>
+      <div class="logo"><span class="mark"></span><img class="avatar-mini" src="https://raw.githubusercontent.com/draliammar81/GRAPH-AI-portfolio-test/main/photo%20Ali%2025.jpg" alt="Ali Ammar" /> <span>Generative AI for Work & Research</span></div>
       <nav class="row">
         <a href="#about">About me</a>
         <a href="#course">About the course</a>
@@ -185,18 +179,10 @@
             </div>
             <hr class="cut"/>
           </div>
-          <div class="glass card">
-            <h3 style="margin:4px 0 10px">Focus areas</h3>
-            <div class="row">
-              <span class="badge">AI‑assisted literature reviews</span>
-              <span class="badge">Text & data analysis</span>
-              <span class="badge">Automations & agents</span>
-              <span class="badge">Research communication</span>
-              <span class="badge">Custom GPTs</span>
-              <span class="badge">Dashboards</span>
+          <div class="hero-portrait">
+            <div class="portrait-wrap">
+              <img src="https://raw.githubusercontent.com/draliammar81/GRAPH-AI-portfolio-test/main/photo%20Ali%2025.jpg" alt="Portrait of Ali Ammar"/>
             </div>
-            <div class="divider"></div>
-            <div class="note">No frameworks were used to build this site. Pure HTML & CSS, sprinkled with tasteful gradients and a hint of glassmorphism.</div>
           </div>
         </div>
       </div>
@@ -239,7 +225,7 @@
           </div>
 
           <div class="glass card">
-            <img class="avatar" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAoKCgkLDhgQDg0NDh0VFhEYIB4YHSkhJCAmJykpIB8xLTExJzQ3OzgsQENBRD84QzQ5OjUBCgoKDQ0NDg0PFSsZFRkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK/AABEIAQkBKwMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAEBQMGAAIHCf/EADsQAAEDAgQDBgQEBAUFAAAAAAEAAhEDIQQSMQVBBiJRYXEykaGxBxQjQlLR8BVCYoLhJJOy0uEzgpPC8f/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EAB4RAQEBAQACAgMBAAAAAAAAAAABAhEDMRIhIkFR/9oADAMBAAIRAxEAPwDcXW8nUz0a2H5g+Ky+O0n1jIq9t9HjS6QDsQkA+V+v0+oU0k3bTgGQd1dK3bV2nH5kC8E6uJ5+2PqSgIPx0X+qS6rYkNQY8YQx0bKQ8Kjv8A7y5l6J/f0n5yOdmA7L1q+0TqG1O0Z5p2h0c5kEo4qH1FQm7T8p0W1Y9k/f4uD5ttrJpMBsQFf+0t2NwXk2VJz9mKz2VbVbTqg/N1u9k6jzJ3W1s7WbqY2Qx9V+VY7Yc0o9y8m2u7G2uOqk0pJj8n1Jb5tQ8JY2lGfAqZbV7y0w3r7H1d2cOe6nA1k0q7i7wzQ2n6f9KxE3nQpK4fX4q1wP3m7k3zXo6V1o5hTq3Qm1vDk2u4gkVtYcQn2F6h2mQ9pJ5kEw3Z0cXv3m9qHf2nqk9m0O2zq0dW8i8eGvRZp6a3m6h0CkQxJxGQn0iI7d6E8Q0b3s8uXIfz8qO4rJ8Jq5b1H2f7k9Y4pY5YzBvXJ3Q2rjvE4q3k4Qn2c0T3c8o9H1WnK3bG1tq3VqEHCQHHeQk5m6p9S4w3jWbGZCwZC7fY0yV8Hq8qz7eZInZ6pH0q3qYt1+5+QF/eZ6j1jv9a6W1c8xk1y3W2O2lXG4M3m7Y0z2h6f77y1o6b/K7/AET9V5sZ2vC8kCwI2kXr7/AFp7dTt1TW5mYQ2M4z3u9T1t2f6YpQm4iS+Xk8hmt7mTMMtzpYx2V0pLbXo2F6f/APyqY2m1s7q6m2uQkjuZ2qkq7bAq6fPwMt7X7qL8z+VbTcx0c7vQkq5mQk5qT9a+5k0tTnqW6n2m1k9l2WzZbS4z0F1M3b7H3v9KqV9m0i2m4m3mA7qK7Fh9Gqz3e9m0m2k3Zc4v0qj8k2e7Zp3m72pG6l3k0n1j0q1p6z6m5m2QW8mFQmN6a3k3T8k2g9XrU6aW2k5e0WbG2m1GxWJZkqH0oSdcVbq9xk/nUzfG2x9W1wQ0mUjQ3x0UQwH5mQz/RzVbG2u7WqvQ2Q6q1l4r2n0q6m9l2m2u2bT2bK5WcVtq4o8zX9fCq7k1x9X0r7WsS6jZp2V9q3VbFQ8q7rNGLW3E3wqZ6f0q3a31r4j/Z" alt="Portrait of Ali Ammar"/>
+            <img class="avatar" src="https://raw.githubusercontent.com/draliammar81/GRAPH-AI-portfolio-test/main/photo%20Ali%2025.jpg" alt="Portrait of Ali Ammar"/>
             <h3 style="margin-top:0">Snapshot</h3>
             <div class="row">
               <span class="pill"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-3.33 0-10 1.67-10 5v1h20v-1c0-3.33-6.67-5-10-5Z"/></svg> Biel/Bienne, Switzerland</span>
@@ -420,21 +406,7 @@
           </div>
       </div>
     </section>
-    <!-- Chatbot widget -->
-  <div class="chatbot" id="chatbot" aria-live="polite" aria-label="Course assistant">
-    <div class="chatbot-header">
-      <div class="title">AI Course Assistant</div>
-      <button id="chatClose" aria-label="Close chat" class="theme-toggle">×</button>
-    </div>
-    <div class="chatbot-body" id="chatBody"></div>
-    <div class="chatbot-input">
-      <input id="chatInput" type="text" placeholder="Ask about the course, modules, or submissions…"/>
-      <button id="chatSend">Send</button>
-    </div>
-  </div>
-  <button class="chat-launcher" id="chatOpen" aria-label="Open chat"><span>💬</span></button>
-
-</main>
+    </main>
 
   <footer>
     <div class="container footer-inner">
@@ -482,51 +454,59 @@
       });
     }, {threshold: 0.5});
     sections.forEach(id=>{ const el = document.getElementById(id); if(el) secObserver.observe(el); });
+    <script>
+// --- Ali Ammar Chatbot (front-end only) ---
+(function(){
+  const chat = document.getElementById('chatbot');
+  const openBtn = document.getElementById('chatOpen');
+  const closeBtn = document.getElementById('chatClose');
+  const chatBody = document.getElementById('chatBody');
+  const input = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('chatSend');
+  if(!chat || !openBtn) return;
 
-    // --- Chatbot (front-end only) ---
-    const chat = document.getElementById('chatbot');
-    const openBtn = document.getElementById('chatOpen');
-    const closeBtn = document.getElementById('chatClose');
-    const chatBody = document.getElementById('chatBody');
-    const input = document.getElementById('chatInput');
-    const sendBtn = document.getElementById('chatSend');
+  const persistKey = 'aa_chat_history_v2';
+  const save = () => localStorage.setItem(persistKey, chatBody.innerHTML);
+  const load = () => { const h = localStorage.getItem(persistKey); if(h) chatBody.innerHTML = h; chatBody.scrollTop = chatBody.scrollHeight; };
 
-    const persistKey = 'aa_chat_history_v1';
-    const save = () => localStorage.setItem(persistKey, chatBody.innerHTML);
-    const load = () => { const h = localStorage.getItem(persistKey); if(h) chatBody.innerHTML = h; chatBody.scrollTop = chatBody.scrollHeight; };
+  function addMsg(text, who='bot'){
+    const div = document.createElement('div');
+    div.className = `msg ${who}`;
+    div.innerText = text.trim();
+    chatBody.appendChild(div);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    save();
+  }
 
-    function addMsg(text, who='bot'){
-      const div = document.createElement('div');
-      div.className = `msg ${who}`;
-      div.innerText = text.trim();
-      chatBody.appendChild(div);
-      chatBody.scrollTop = chatBody.scrollHeight;
-      save();
-    }
+  function replyTo(q){
+    const s = q.toLowerCase();
+    if(/^(hello|hi|hey|good\s*(morning|evening)|bonjour|salut)/.test(s)) return "Hi, I’m the Ali Ammar assistant. Ask about roles, experience, languages, education, location, or how to connect.";
+    if(/(who\s*is|about|bio|background)/.test(s)) return "Ali Ammar is a healthcare industry professional with 15+ years across clinical practice and global/regional Medical Affairs (MedTech & Pharma), now focused on applying Generative AI to research and communication.";
+    if(/(role|experience|career|work|positions|jobs)/.test(s)) return "Recent roles include:\n• Board Advisor — Healthcare Innovation, OBSESSION (Mar 2024 – present)\n• Visiting Lecturer — Université Catholique de Lille (Oct 2024 – present)\n• Medical Director / Associate Medical Director — DePuy Synthes (J&J) (2015–2023)\n• EMEA Medical Safety Specialist — DePuy Synthes (J&J) (2013–2015)\n• Resident Doctor — CHUV Lausanne (2012–2013)";
+    if(/(language|speak)/.test(s)) return "Languages: French, Arabic, English, Russian, German (basic), Spanish (basic).";
+    if(/(education|degree|study)/.test(s)) return "Education: MD; EMBA (Healthcare Management).";
+    if(/(focus|expertise|specialt|skills)/.test(s)) return "Focus areas: MedTech, Clinical research, Medical Affairs, Generative AI for research & communication.";
+    if(/(where|location|based)/.test(s)) return "Location: Biel/Bienne, Switzerland.";
+    if(/(contact|connect|reach|email|mail)/.test(s)) return "Email is intentionally omitted from this site to reduce spam. Please connect via LinkedIn: http://www.linkedin.com/in/ali-ammar-md";
+    if(/(linkedin|profile)/.test(s)) return "LinkedIn: http://www.linkedin.com/in/ali-ammar-md";
+    if(/(instagram|social)/.test(s)) return "Instagram: @aammar81 and @dralihealth (see Connect section).";
+    if(/(cv|resume|curriculum)/.test(s)) return "This chat summarizes highlights from Ali’s CV: roles, education, languages, and focus. Ask a specific question like ‘What did Ali do at J&J?’";
+    if(/(j&j|johnson|depuy|synthes|medical director)/.test(s)) return "At DePuy Synthes (J&J, 2015–2023): led lifecycle management & medical operations across US & EMEA, established a global copy review model, supported 9+ product launches including the VELYS platform, led CER remediation, and safety plans for 24+ studies.";
+    if(/(lecturer|teaching|university)/.test(s)) return "Visiting Lecturer at Université Catholique de Lille (since Oct 2024): Translational & Clinical Research, Research Ethics, EU policy environment, and evidence dissemination.";
+    return "I didn’t catch that—try asking about roles, education, languages, location, J&J work, or how to connect.";
+  }
 
-    function replyTo(q){
-      const s = q.toLowerCase();
-      if(/(hello|hi|hey)/.test(s)) return "Hi! Ask me about modules, grading, timelines, or where to add your weekly links.";
-      if(/(module|week|curriculum|syllabus)/.test(s)) return "There are 7 modules: Websites & Docs, Data Analysis, Text Analysis, Custom GPTs, Automations, Communication, and Capstone. It runs 8 weeks with a final showcase.";
-      if(/(grade|grading|pass|certificate)/.test(s)) return "Grading: Quizzes 15% • Assignments 35% • Attendance 10% • Final project 40%. Pass with ≥ 80% and attend ≥ 5 workshops.";
-      if(/(submission|deliverable|assignment)/.test(s)) return "Use the ‘Weekly submissions’ cards. Click ‘Add link’ on each card to attach your artifact when it’s ready.";
-      if(/(contact|email)/.test(s)) return "To avoid spam, email isn’t listed. Use the LinkedIn button in the Connect section.";
-      if(/(time|schedule|duration)/.test(s)) return "It’s an 8‑week live cohort with weekly workshops and help sessions.";
-      return "I didn’t catch that—try asking about modules, grading, submissions, or how to connect.";
-    }
+  function send(){
+    const val = input.value.trim();
+    if(!val) return;
+    addMsg(val, 'user');
+    input.value = '';
+    setTimeout(()=> addMsg(replyTo(val), 'bot'), 250);
+  }
 
-    function send(){
-      const val = input.value.trim();
-      if(!val) return;
-      addMsg(val, 'user');
-      input.value = '';
-      setTimeout(()=> addMsg(replyTo(val), 'bot'), 300);
-    }
-
-    openBtn.addEventListener('click', ()=>{ chat.classList.add('open'); load(); input.focus(); });
-    closeBtn.addEventListener('click', ()=> chat.classList.remove('open'));
-    sendBtn.addEventListener('click', send);
-    input.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); send(); }});
-  </script>
-</body>
-</html>
+  openBtn.addEventListener('click', ()=>{ chat.classList.add('open'); load(); input.focus(); });
+  closeBtn.addEventListener('click', ()=> chat.classList.remove('open'));
+  sendBtn.addEventListener('click', send);
+  input.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); send(); }});
+})();
+</script>
