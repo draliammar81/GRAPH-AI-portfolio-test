@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/11/05/15/20251105150803-DSRC8PF2.js" defer></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ali Ammar — Generative AI for Work & Research</title>
@@ -93,7 +91,7 @@
       border:var(--glass-border); box-shadow: var(--shadow)
     }
     .submission h4{margin:0 0 8px}
-    .submission p{margin:0 10px 14px 0; color:var(--muted)}
+    .submission p{margin:0 0 14px; color:var(--muted)}
     .btn{display:inline-block; padding:10px 14px; border-radius:12px; font-weight:700; background:linear-gradient(135deg, #9b8cff, #65e2d9); color:#0b0f17}
     .btn.ghost{background:transparent; color:var(--link); border:1px solid rgba(181,168,255,.55)}
     .cta{display:flex; gap:12px; flex-wrap:wrap}
@@ -106,7 +104,10 @@
     @keyframes floaty{0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)}}
     .portrait{animation: floaty 6s ease-in-out infinite}
     .brand .logo{animation: floaty 7s ease-in-out .4s infinite}
-  </style>
+      /* ===== FORM EMBED ===== */
+    .form-embed{margin-top:8px}
+    .form-embed iframe{width:100%; height:820px; border:0; border-radius:16px; background:#ffffff}
+</style>
 </head>
 <body>
   <nav class="nav">
@@ -115,8 +116,9 @@
       <ul>
         <li><a href="#about-me">About me</a></li>
         <li><a href="#about-course">About the course</a></li>
-        <li><a href="#submissions">Weekly submissions</a></li>
-      </ul>
+        $1
+        <li><a href="#contact">Contact for Consultation<\/a><\/li>
+      <\/ul>
     </div>
   </nav>
 
@@ -274,19 +276,8 @@
           </article>
           <article class="submission">
             <h4>Week 2 — Automated Data Analysis</h4>
-            <p><strong>Workshop 2 Projects:</strong> Analysis of Colorectal Cancer Incidence Rates Worldwide using AI tools. Built an end‑to‑end notebook‑to‑report pipeline (data ingestion → cleaning/EDA → visualization → exportable outputs).</p>
-            <div class="cta" aria-label="Workshop 2 project links">
-              <a class="btn" href="https://github.com/draliammar81/GRAPH-AI-portfolio-test/blob/main/WORLDWIDE%20COLORECTAL%20CANCER%20INCIDENCE%20RATES%20Ali%20Ammar.pdf" target="_blank" rel="noopener">Report v1 (PDF)</a>
-              <a class="btn" href="https://github.com/draliammar81/GRAPH-AI-portfolio-test/blob/main/Colorectal_Cancer_Report.html" target="_blank" rel="noopener">Report v2 (HTML)</a>
-            </div>
-          </article>
-          <!-- NEW: Workshop 3 submission -->
-          <article class="submission">
-            <h4>Workshop 3 — Automated Data Analysis</h4>
-            <p><strong>Project:</strong> Data Analyst Job Posting. Parsed and analyzed a real job description to extract core skills, tools, and keywords; mapped requirements to a learning plan; and generated a concise report for portfolio use.</p>
-            <div class="cta" aria-label="Workshop 3 project links">
-              <a class="btn" href="https://github.com/draliammar81/GRAPH-AI-portfolio-test/blob/main/Data%20Analyst%20Job%20Posting.pdf" target="_blank" rel="noopener">Report (PDF)</a>
-            </div>
+            <p>Notebook‑to‑report workflow: upload data → charts → exportable report.</p>
+            <a class="btn" href="#" aria-disabled="true">Link coming soon</a>
           </article>
           <article class="submission">
             <h4>Week 3 — Literature &amp; Text Pipelines</h4>
@@ -318,6 +309,17 @@
             <p>Public presentation deck + one‑pager + project page.</p>
             <a class="btn" href="#" aria-disabled="true">Link coming soon</a>
           </article>
+        </div>
+      </div>
+    </section>
+      
+    <!-- Contact for Consultation -->
+    <section id="contact">
+      <div class="wrap">
+        <span class="kicker">Get in touch</span>
+        <h2 class="section-title">Contact for Consultation</h2>
+        <div class="card form-embed">
+          <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSftZBAvfsDSCJO-7rMCi9DsIqH0zTFexSl6TnF7cRrtghUisg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…<\/iframe>
         </div>
       </div>
     </section>
