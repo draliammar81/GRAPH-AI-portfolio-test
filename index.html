@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ali Ammar — Generative AI for Work & Research</title>
-  <meta name="description" content="Portfolio and course hub for Ali Ammar — Generative AI for Work & Research (8‑week live cohort)." />
+  <meta name="description" content="Portfolio and course hub for Ali Ammar — Generative AI for Work & Research (8-week live cohort)." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -46,6 +46,24 @@
     .brand .logo{width:36px;height:36px;border-radius:12px; background: conic-gradient(from 230deg, #9b8cff, #65e2d9, #ff7ab6, #9b8cff); box-shadow: var(--shadow)}
     .nav ul{display:flex; gap:22px; list-style:none; padding:0; margin:0}
     .nav a{font-weight:600}
+
+    /* === NEW: pill-style button for Consultation === */
+    .nav .btn-pill{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+      background:linear-gradient(135deg, var(--primary), var(--accent));
+      color:#0b0f17;
+      font-weight:800;
+      box-shadow:var(--shadow);
+      border:0;
+      line-height:1;
+      text-decoration:none;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+    .nav .btn-pill:hover{ text-decoration:none; transform:translateY(-1px); }
+    .nav .btn-pill:focus{ outline:2px solid rgba(181,168,255,.6); outline-offset:2px; }
+
     /* ===== HERO ===== */
     .hero{padding:90px 0 40px; text-align:center; position:relative; overflow:hidden}
     .halo{position:absolute; inset:-50px -50px auto auto; width:420px; height:420px; filter: blur(60px); background: radial-gradient(closest-side, rgba(155,140,255,.35), transparent); opacity:.6; pointer-events:none}
@@ -94,7 +112,7 @@
     }
     .submission h4{margin:0 0 8px}
     .submission p{margin:0 10px 14px 0; color:var(--muted)}
-    .btn{display:inline-block; padding:10px 14px; border-radius:12px; font-weight:700; background:linear-gradient(135deg, #9b8cff, #65e2d9); color:#0b0f17}
+    .btn{display:inline-block; padding:10px 14px; border-radius:12px; font-weight:700; background:linear-gradient(135deg, var(--primary), var(--accent)); color:#0b0f17}
     .btn.ghost{background:transparent; color:var(--link); border:1px solid rgba(181,168,255,.55)}
     .cta{display:flex; gap:12px; flex-wrap:wrap}
     /* ===== FOOTER ===== */
@@ -116,6 +134,8 @@
         <li><a href="#about-me">About me</a></li>
         <li><a href="#about-course">About the course</a></li>
         <li><a href="#submissions">Weekly submissions</a></li>
+        <!-- Consultation pill button opens Google Form directly -->
+        <li><a class="btn-pill" href="https://docs.google.com/forms/d/e/1FAIpQLSftZBAvfsDSCJO-7rMCi9DsIqH0zTFexSl6TnF7cRrtghUisg/viewform" target="_blank" rel="noopener">Consultation</a></li>
       </ul>
     </div>
   </nav>
@@ -127,7 +147,7 @@
         <img alt="Portrait of Ali Ammar" src="https://raw.githubusercontent.com/draliammar81/GRAPH-AI-portfolio-test/main/photo%20Ali%2025.jpg" />
       </div>
       <h1>Generative AI for Work &amp; Research</h1>
-      <p class="lead">Physician &amp; EMBA with 15+ years across clinical practice and global MedTech/Pharma medical affairs. I build ethical, rigorous AI‑powered workflows for research productivity, communication, and operations.</p>
+      <p class="lead">Physician &amp; EMBA with 15+ years across clinical practice and global MedTech/Pharma medical affairs. I build ethical, rigorous AI-powered workflows for research productivity, communication, and operations.</p>
       <div class="badges" role="list" aria-label="expertise">
         <span class="chip">Medical &amp; Scientific Affairs</span>
         <span class="chip">Copy Review &amp; Compliance</span>
@@ -145,10 +165,10 @@
           <span class="kicker">About me</span>
           <h2 class="section-title">Ali Ammar, MD, EMBA</h2>
           <div class="card">
-            <p><strong>Seasoned healthcare professional</strong> spanning clinical neurology and global/regional Medical Affairs. Led copy‑review programs, clinical evidence initiatives, and risk‑management processes across multiple business units at Johnson &amp; Johnson MedTech. Visiting Lecturer — Faculté de Gestion, Économie et Sciences, Université Catholique de Lille (Oct 2024–present). Courses: Translational &amp; Clinical Research, Research Ethics, and European Environment &amp; Policies.</p>
+            <p><strong>Seasoned healthcare professional</strong> spanning clinical neurology and global/regional Medical Affairs. Led copy-review programs, clinical evidence initiatives, and risk-management processes across multiple business units at Johnson &amp; Johnson MedTech. Visiting Lecturer — Faculté de Gestion, Économie et Sciences, Université Catholique de Lille (Oct 2024–present). Courses: Translational &amp; Clinical Research, Research Ethics, and European Environment &amp; Policies.</p>
             <ul class="list" style="margin-top:12px">
               <li><strong>Recent roles:</strong> Medical Director, DePuy Synthes — Joint Reconstruction (2022–2023); Associate Medical Director, Medical Operations (2015–2022); EMEA Medical Safety Specialist (2013–2015).</li>
-              <li><strong>Focus:</strong> Evidence generation &amp; dissemination, compliant communications, safety management (SMP), post‑market surveillance, and clinical study support.</li>
+              <li><strong>Focus:</strong> Evidence generation &amp; dissemination, compliant communications, safety management (SMP), post-market surveillance, and clinical study support.</li>
               <li><strong>Languages:</strong> French &amp; Arabic (native), English &amp; Russian (fluent), German &amp; Spanish (basic).</li>
               <li><strong>Board Advisor:</strong> OBSESSION — healthcare innovation (2024–present).</li>
               <li><strong>Visiting Lecturer:</strong> Faculté de Gestion, Économie et Sciences — Université Catholique de Lille (Oct 2024–present). Courses: Translational & Clinical Research; Research Ethics; European Environment & Policies.</li>
@@ -160,8 +180,8 @@
           <div class="card">
             <div class="pill" style="margin-bottom:10px"><span class="dot"></span> Snapshot</div>
             <ul class="list">
-              <li><strong>Specialties:</strong> Clinical research, AI‑assisted analysis, compliant review, MedTech launches (VELYS platform).</li>
-              <li><strong>Strengths:</strong> Cross‑functional leadership, mentoring, DEI advocacy, communication across scientific &amp; business audiences.</li>
+              <li><strong>Specialties:</strong> Clinical research, AI-assisted analysis, compliant review, MedTech launches (VELYS platform).</li>
+              <li><strong>Strengths:</strong> Cross-functional leadership, mentoring, DEI advocacy, communication across scientific &amp; business audiences.</li>
               <li><strong>Certifications:</strong> ABHI/ABPI final signatory, GCP, leadership training (Harvard online).</li>
               <li><strong>Education:</strong> MD, Executive MBA in Healthcare Management.</li>
             </ul>
@@ -194,7 +214,7 @@
     <section id="about-course">
       <div class="wrap">
         <span class="kicker">About the course</span>
-        <h2 class="section-title">Generative AI for Work &amp; Research — 8‑Week Live Cohort</h2>
+        <h2 class="section-title">Generative AI for Work &amp; Research — 8-Week Live Cohort</h2>
         <div class="grid grid-3">
           <div class="card">
             <h3>Bootcamp features</h3>
@@ -216,19 +236,19 @@
           </div>
           <div class="card">
             <h3>Why GRAPH Courses</h3>
-            <p>University‑backed, practical AI education rooted in data science and real‑world workflows — based in Geneva with a global community.</p>
+            <p>University-backed, practical AI education rooted in data science and real-world workflows — based in Geneva with a global community.</p>
           </div>
         </div>
 
         <div class="card" style="margin-top:18px">
-          <h3 style="margin-top:0">Modules (Week‑by‑Week)</h3>
+          <h3 style="margin-top:0">Modules (Week-by-Week)</h3>
           <div class="timeline">
             <div class="t-item">
               <div class="t-role">1. Websites, Documents &amp; Presentations</div>
-              <div class="t-meta">LLM basics, Markdown/LaTeX/HTML, no‑code sites, AI presentation tools.</div>
+              <div class="t-meta">LLM basics, Markdown/LaTeX/HTML, no-code sites, AI presentation tools.</div>
             </div>
             <div class="t-item">
-              <div class="t-role">2. AI‑Automated Data Analysis</div>
+              <div class="t-role">2. AI-Automated Data Analysis</div>
               <div class="t-meta">Code Interpreter, Julius, TheBricks, dataset transformation, automated dashboards &amp; reports.</div>
             </div>
             <div class="t-item">
@@ -237,7 +257,7 @@
             </div>
             <div class="t-item">
               <div class="t-role">4. Custom GPTs &amp; Chatbots</div>
-              <div class="t-meta">Chat architecture, context windows, RAG, Botpress, knowledge‑base integrations.</div>
+              <div class="t-meta">Chat architecture, context windows, RAG, Botpress, knowledge-base integrations.</div>
             </div>
             <div class="t-item">
               <div class="t-role">5. AI for Task Automation</div>
@@ -269,12 +289,12 @@
           <!-- Repeatable block: when links are ready, replace # with the actual URL per week -->
           <article class="submission">
             <h4>Week 1 — Website, Docs &amp; Slides</h4>
-            <p>Prompt‑to‑site experiment + structured research document template.</p>
+            <p>Prompt-to-site experiment + structured research document template.</p>
             <a class="btn" href="#" aria-disabled="true">Link coming soon</a>
           </article>
           <article class="submission">
             <h4>Week 2 — Automated Data Analysis</h4>
-            <p><strong>Workshop 2 Projects:</strong> Analysis of Colorectal Cancer Incidence Rates Worldwide using AI tools. Built an end‑to‑end notebook‑to‑report pipeline (data ingestion → cleaning/EDA → visualization → exportable outputs).</p>
+            <p><strong>Workshop 2 Projects:</strong> Analysis of Colorectal Cancer Incidence Rates Worldwide using AI tools. Built an end-to-end notebook-to-report pipeline (data ingestion → cleaning/EDA → visualization → exportable outputs).</p>
             <div class="cta" aria-label="Workshop 2 project links">
               <a class="btn" href="https://github.com/draliammar81/GRAPH-AI-portfolio-test/blob/main/WORLDWIDE%20COLORECTAL%20CANCER%20INCIDENCE%20RATES%20Ali%20Ammar.pdf" target="_blank" rel="noopener">Report v1 (PDF)</a>
               <a class="btn" href="https://github.com/draliammar81/GRAPH-AI-portfolio-test/blob/main/Colorectal_Cancer_Report.html" target="_blank" rel="noopener">Report v2 (HTML)</a>
@@ -295,12 +315,12 @@
           </article>
           <article class="submission">
             <h4>Week 4 — Custom GPT / RAG</h4>
-            <p>Domain‑scoped assistant with retrieval, evaluation set, and guardrails.</p>
+            <p>Domain-scoped assistant with retrieval, evaluation set, and guardrails.</p>
             <a class="btn" href="#" aria-disabled="true">Link coming soon</a>
           </article>
           <article class="submission">
             <h4>Week 5 — Task Automation</h4>
-            <p>Multi‑step agent that triages requests and triggers follow‑up actions.</p>
+            <p>Multi-step agent that triages requests and triggers follow-up actions.</p>
             <a class="btn" href="#" aria-disabled="true">Link coming soon</a>
           </article>
           <article class="submission">
@@ -315,7 +335,7 @@
           </article>
           <article class="submission">
             <h4>Week 8 — Showcase</h4>
-            <p>Public presentation deck + one‑pager + project page.</p>
+            <p>Public presentation deck + one-pager + project page.</p>
             <a class="btn" href="#" aria-disabled="true">Link coming soon</a>
           </article>
         </div>
